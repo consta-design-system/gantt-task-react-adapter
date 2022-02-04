@@ -23,59 +23,39 @@ $ yarn add @consta/gantt-task-react-adapter
 Например, так:
 
 ```js
+import React from 'react'
 import { Theme, presetGpnDefault } from '@consta/uikit/Theme'
-import { default as RCTree } from 'rc-tree'
-import { rcTreeAdapter } from '@consta/rc-tree-adapter/rcTreeAdapter'
+import { Gantt, Task } from 'gantt-task-react'
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter'
 
-const data = [
+
+const data: Task[] = [
   {
-    key: '0-0',
-    title: 'Ветка 1',
-    children: [
-      { key: '0-0-0', title: 'Ветка 1-1', children: [{ key: '0-0-0-0', title: 'Ветка 1-1-0' }] },
-      {
-        key: '0-0-1',
-        title: 'Ветка 1-2',
-        children: [
-          { key: '0-0-1-0', title: 'Ветка 1-2-0' },
-          { key: '0-0-1-1', title: 'Ветка 1-2-1', disableCheckbox: true },
-          { key: '0-0-1-2', title: 'Ветка 1-2-2' },
-          { key: '0-0-1-3', title: 'Ветка 1-2-3' },
-          { key: '0-0-1-4', title: 'Ветка 1-2-4' },
-          { key: '0-0-1-5', title: 'Ветка 1-2-5' },
-          { key: '0-0-1-6', title: 'Ветка 1-2-6' },
-          { key: '0-0-1-7', title: 'Ветка 1-2-7' },
-          { key: '0-0-1-8', title: 'Ветка 1-2-8' },
-          { key: '0-0-1-9', title: 'Ветка 1-2-9' },
-        ],
-      },
-    ],
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
+    name: 'Some Project',
+    id: 'ProjectSample',
+    progress: 25,
+    type: 'project',
+
+    hideChildren: false,
   },
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2, 12, 28),
+    name: 'Idea',
+    id: 'Task 0',
+    progress: 45,
+    type: 'task',
+    project: 'ProjectSample',
+  },
+  ...
 ]
 
 const App = () => {
-  const treeProps = rcTreeAdapter({ size: 's' })
+  const styleOptions = useGanttTaskReactAdapter({})
 
-  return <RCTree {...treeProps} treeData={data} defaultExpandAll height={100} showIcon />
-}
-```
-
-или так:
-
-```js
-import { Theme, presetGpnDefault } from '@consta/uikit/Theme'
-import { default as RCTree } from 'rc-tree'
-import { cnRcTree } from '@consta/rc-tree-adapter/RcTree'
-
-const Example = () => {
-  const prefix = cnRcTree(
-    {
-      size: 's',
-    },
-    ['CustomTree']
-  )
-
-  return <RCTree treeData={data} prefixCls={prefix} defaultExpandAll />
+  return <Gantt {...styleOptions} tasks={data} />
 }
 ```
 
