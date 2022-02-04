@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Документация/Старт" id="common-start" parameters={{ order: 100 }} />
+
+# rcTreeAdapter | Дизайн-система Consta
+
+Адптер для диаграммы ганта из библиотеки [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react). Стилизует дерево для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+
+[Посмотреть на GitHub](https://github.com/consta-design-system/gantt-task-react-adapter)
+
+#### Как создать стилизованное дерево
+
+Есть два варианта:
+
+- Подключите миксин [RcTree](?path=/docs/rctree--page) — он добавит дереву стили из Consta.
+- Подключите адаптер [rcTreeAdapter](?path=/docs/utils-rctreeadapter--playground), чтобы добавить стили и значения по умолчанию для некоторых свойств.
+
+## Быстрый старт
+
+#### Установите пакет и зависимости
+
+`yarn add @consta/uikit @consta/gantt-task-react-adapter` или `npm install @consta/uikit @consta/gantt-task-react-adapter`
+
+#### Подключите тему
+
+Тему обязательно нужно подключать в корне приложения, так, чтобы все компоненты `@consta/gantt-task-react-adapter` были вложены в компонент `Theme`.
+
+[Как подключить тему](https://consta-uikit.vercel.app/?path=/docs/thematization-how-to-connect-theme--page)
+
+#### Всë!
+
+## Разработчикам
+
+[Контрибьюторам](https://consta-uikit.vercel.app/?path=/docs/common-develop-contributors--page)
+
+[Правила оформления коммитов](https://consta-uikit.vercel.app/?path=/docs/common-develop-commits-style--page)
+
+[Правила оформления issue](https://consta-uikit.vercel.app/?path=/docs/common-develop-issues--page)
+
+## Подробности о дизайн-системе Consta
+
+[Основная документация](https://consta-uikit.vercel.app/?path=/docs/common-about--page)
+
+[Сайт дизайн-системы](https://consta.gazprom-neft.ru/)
+
+[Телеграм-канал с обновлениями](https://t.me/consta_ui_releases)
