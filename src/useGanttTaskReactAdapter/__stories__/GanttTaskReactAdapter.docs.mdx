@@ -1,0 +1,135 @@
+import {
+  RemadeInfo,
+  RemadeTableInfo,
+} from '@/__private__/storybook/components/RemadeInfo/RemadeInfo'
+
+import { GanttTaskReactAdapterExample } from './examples/GanttTaskReactAdapterExample/GanttTaskReactAdapterExample'
+
+# useGanttTaskReactAdapter
+
+```tsx
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter'
+```
+
+Этот адаптер стилизует диаграмму ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/)
+
+- [Диаграмма](#диаграмма)
+- [Внешний вид](#внешний-вид)
+  - [Режим отображения](#режим-отображения)
+- [Импорт](#импорт)
+- [Список свойств](#свойства)
+
+## Диаграмма
+
+Создайте список объектов с описанием задач:
+
+- `id*` - идентификатор задачи
+- `name*` - отображаемое название задачи
+- `type*` - тип задачи: `task`, `milestone`, `project`
+- `start*` - дата начала
+- `end*` - дата завершения
+- `progress*` - прогресс по задаче в процентах
+- `dependencies` - список идентификаторв задач родителей
+- `styles` - уникальный стиль для конкретной задачи
+- `isDisabled` - если `true` отключает все действия на задаче
+- `fontSize` - размер текста
+- `project` - название проекта к которому прикреплена задача
+- `hideChildren` - если `true` скрывает все дочерние задачи
+
+```tsx
+const data = [
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
+    name: 'Some Project',
+    id: 'ProjectSample',
+    progress: 25,
+    type: 'project',
+
+    hideChildren: false,
+  },
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2, 12, 28),
+    name: 'Idea',
+    id: 'Task 0',
+    progress: 45,
+    type: 'task',
+    project: 'ProjectSample',
+  },
+  ...
+]
+```
+
+Чтобы отобразить задачи, передайте в свойстве `tasks` объект с данными.
+
+```tsx
+import React from 'react'
+import { Gantt, Task } from 'gantt-task-react'
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter'
+
+const data:Task[] = [
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
+    name: 'Some Project',
+    id: 'ProjectSample',
+    progress: 25,
+    type: 'project',
+
+    hideChildren: false,
+  },
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2, 12, 28),
+    name: 'Idea',
+    id: 'Task 0',
+    progress: 45,
+    type: 'task',
+    project: 'ProjectSample',
+  },
+  ...
+]
+
+export function GanttTaskReactAdapterExample() {
+  const styleOptions = useGanttTaskReactAdapter({})
+
+  return <Gantt {...styleOptions} tasks={data} />
+}
+```
+
+<GanttTaskReactAdapterExample />
+
+## Внешний вид
+
+### Режим отображения
+
+Вы можете изменить режим отображения диаграммы используя свойство `viewMode`, оно принимает в себя
+значения укзанные в энаме `ViewMode`:
+
+```tsx
+import { ViewMode } from 'gantt-task-react'
+
+const views = [
+  ViewMode.Day, // В каждом столбце отображется четко один день
+  ViewMode.HalfDay, // Как и в ViewMode.Day, только день делится на половины
+  ViewMode.Month, // В каждом столбце отображется четко один месяц
+  ViewMode.QuarterDay, // Как и в ViewMode.Day, только день делится на четверти
+  ViewMode.Week, // В каждом столбце отображется четко одна неделя
+]
+```
+
+## Импорт
+
+```tsx
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter'
+```
+
+## Свойства
+
+<RemadeTableInfo apiUrl="https://github.com/MaTeMaTuK/gantt-task-react" />
+
+| Свойство                          | Тип и значения | По умолчанию   | Описание                    |
+| --------------------------------- | -------------- | -------------- | --------------------------- |
+| [`tasks`](#диаграмма)             | `Task[]`       | -              | Список задач                |
+| [`viewMode?`](#режим-отображения) | `ViewMode`     | `ViewMode.Day` | Режим отображения диаграммы |
