@@ -1,9 +1,8 @@
 import React from 'react'
-import { Gantt, Task } from 'gantt-task-react'
+import { Gantt, Task, ViewMode } from 'gantt-task-react'
 import { createMetadata } from '../../__private__/storybook'
 import { data } from '../__mock__/mock.data'
 import { select } from '@storybook/addon-knobs'
-import { ganttTaskReactAdapterPropView, ganttTaskReactAdapterPropViewDefault } from '../types'
 import { cn } from '@/__private__/utils/bem'
 import { useGanttTaskReactAdapter } from '../useGanttTaskReactAdapter'
 
@@ -12,7 +11,11 @@ import mdx from './GanttTaskReactAdapter.docs.mdx'
 import './GanttTaskReactAdapterStories.css'
 
 const defaultKnobs = () => ({
-  viewMode: select('viewMode', ganttTaskReactAdapterPropView, ganttTaskReactAdapterPropViewDefault),
+  viewMode: select(
+    'viewMode',
+    [ViewMode.Day, ViewMode.HalfDay, ViewMode.Month, ViewMode.QuarterDay, ViewMode.Week],
+    ViewMode.Day
+  ),
 })
 
 const getStartEndDateForProject = (tasks: Task[], projectId: string) => {
@@ -39,7 +42,7 @@ export const Playground = () => {
 
   const [tasks, setTasks] = React.useState<Task[]>(data)
 
-  const styleOptions = useGanttTaskReactAdapter({ viewMode })
+  const styleOptions = useGanttTaskReactAdapter()
 
   const handleTaskChange = (task: Task) => {
     let newTasks = tasks.map(t => (t.id === task.id ? task : t))

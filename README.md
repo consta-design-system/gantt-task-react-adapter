@@ -53,7 +53,7 @@ const data: Task[] = [
 ]
 
 const App = () => {
-  const styleOptions = useGanttTaskReactAdapter({})
+  const styleOptions = useGanttTaskReactAdapter()
 
   return <Gantt {...styleOptions} tasks={data} />
 }
