@@ -1,6 +1,6 @@
 import React from 'react'
 import { Gantt, Task, ViewMode } from 'gantt-task-react'
-import { createMetadata } from '../../__private__/storybook'
+import { createMetadata } from '../../../storybook'
 import { data } from '../__mock__/mock.data'
 import { select } from '@storybook/addon-knobs'
 import { cn } from '@/__private__/utils/bem'
@@ -9,6 +9,10 @@ import { useGanttTaskReactAdapter } from '../useGanttTaskReactAdapter'
 import mdx from './GanttTaskReactAdapter.docs.mdx'
 
 import './GanttTaskReactAdapterStories.css'
+import { ganttTaskReactAdapterPropSize, ganttTaskReactAdapterPropSizeDefault } from '../types'
+import { TaskListTable } from '@/TaskListTable'
+import { TaskListHeader } from '@/TaskListHeader'
+import { TooltipContent } from '@/TooltipContent'
 
 const defaultKnobs = () => ({
   viewMode: select(
@@ -16,6 +20,7 @@ const defaultKnobs = () => ({
     [ViewMode.Day, ViewMode.HalfDay, ViewMode.Month, ViewMode.QuarterDay, ViewMode.Week],
     ViewMode.Day
   ),
+  size: select('size', ganttTaskReactAdapterPropSize, ganttTaskReactAdapterPropSizeDefault),
 })
 
 const getStartEndDateForProject = (tasks: Task[], projectId: string) => {
@@ -38,11 +43,11 @@ const getStartEndDateForProject = (tasks: Task[], projectId: string) => {
 const cnGanttTaskReactAdapterStories = cn('GanttTaskReactAdapterStories')
 
 export const Playground = () => {
-  const { viewMode } = defaultKnobs()
+  const { viewMode, size } = defaultKnobs()
 
   const [tasks, setTasks] = React.useState<Task[]>(data)
 
-  const styleOptions = useGanttTaskReactAdapter()
+  const { prefix, ...styleOptions } = useGanttTaskReactAdapter({ size })
 
   const handleTaskChange = (task: Task) => {
     let newTasks = tasks.map(t => (t.id === task.id ? task : t))
@@ -60,32 +65,31 @@ export const Playground = () => {
   const handleTaskDelete = (task: Task) => {
     const conf = window.confirm('Are you sure about ' + task.name + ' ?')
     if (conf) {
-      setTasks(tasks.filter(t => t.id !== task.id))
+      setTasks([...tasks].filter(t => t.id !== task.id))
     }
     return conf
   }
 
   const handleProgressChange = async (task: Task) => {
-    setTasks(tasks.map(t => (t.id === task.id ? task : t)))
-  }
-
-  const handleDblClick = (task: Task) => {
-    alert('On Double Click event Id:' + task.id)
+    setTasks([...tasks].map(t => (t.id === task.id ? task : t)))
   }
 
   const handleExpanderClick = (task: Task) => {
-    setTasks(tasks.map(t => (t.id === task.id ? task : t)))
+    setTasks([...tasks].map(t => (t.id === task.id ? task : t)))
   }
+
   return (
-    <div className={cnGanttTaskReactAdapterStories()}>
+    <div className={cnGanttTaskReactAdapterStories(null, [prefix])}>
       <Gantt
-        tasks={data}
+        tasks={tasks}
         viewMode={viewMode}
         onDateChange={handleTaskChange}
         onDelete={handleTaskDelete}
         onProgressChange={handleProgressChange}
-        onDoubleClick={handleDblClick}
         onExpanderClick={handleExpanderClick}
+        TaskListTable={TaskListTable}
+        TaskListHeader={TaskListHeader}
+        TooltipContent={TooltipContent}
         {...styleOptions}
       />
     </div>
