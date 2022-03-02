@@ -45,7 +45,7 @@ export const useGanttTaskReactAdapter: GanttTaskReactAdapter = props => {
     projectBackgroundSelectedColor: '#FFBD59',
     milestoneBackgroundColor: vars.color.primary['--color-bg-caution'],
     milestoneBackgroundSelectedColor: '#FFBD59',
-    arrowColor: vars.color.primary['--color-bg-border'],
+    arrowColor: '#CCD9E0',
     arrowIndent: convertPixelToNumber(vars.space['--space-m']),
     todayColor: vars.color.primary['--color-bg-stripe'],
     prefix: cnUseGanttTaskReactAdapter({ size }),
