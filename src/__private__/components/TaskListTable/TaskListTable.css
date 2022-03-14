@@ -1,0 +1,59 @@
+.TaskListTable {
+  width: 100%;
+
+  border-top: 1px solid var(--color-bg-border);
+
+  & .TaskListTable-Row:nth-child(even) {
+    background: var(--color-bg-stripe);
+  }
+
+  &-Row {
+    display: grid;
+    grid-template-columns: 214px 124px 127px;
+
+    width: var(--row-width);
+    height: var(--row-height);
+
+    &_selected {
+      background: var(--color-bg-secondary);
+    }
+
+    &_disabled {
+      background: var(--color-control-bg-disable);
+    }
+  }
+
+  &-Cell {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding-left: var(--space-m);
+
+    white-space: nowrap;
+    text-overflow: elepsis;
+
+    border-right: 1px solid var(--color-bg-border);
+
+    &_withotChildren {
+      padding-left: var(--space-3xl);
+    }
+  }
+
+  &-Button {
+    width: var(--space-s);
+    height: var(--space-s);
+    margin-right: var(--space-s);
+    padding: 0;
+
+    cursor: pointer;
+
+    border: none;
+    background: none;
+
+    &_hide .Icon {
+      transform: rotate(-90deg);
+    }
+  }
+}

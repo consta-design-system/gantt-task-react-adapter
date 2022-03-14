@@ -1,0 +1,6 @@
+.GanttTaskReactAdapterStories {
+  box-sizing: border-box;
+  max-width: 100vw;
+  max-height: 100vh;
+  padding: var(--space-m);
+}
