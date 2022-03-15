@@ -36,7 +36,7 @@ export const useGanttTaskReactAdapter: GanttTaskReactAdapter = props => {
     fontSize: vars.size['--size-text-m'],
     barFill: (rowHeight / (rowHeight + 12)) * 100,
     barProgressColor: '#90DDFF',
-    barProgressSelectedColor: '#71CDF5',
+    barProgressSelectedColor: '#62C5F0',
     barBackgroundColor: vars.color.primary['--color-bg-system'],
     barBackgroundSelectedColor: vars.color.primary['--color-bg-system'],
     projectProgressColor: '#D2E058',
