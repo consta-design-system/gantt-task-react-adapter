@@ -140,9 +140,5 @@
     "storybook-addon-smart-knobs": "6.0.2",
     "storybook-addon-themes": "5.4.1",
     "webpack-merge": "4.2.2"
-  },
-  "engines": {
-    "node": "12.x",
-    "yarn": ">=1.19.1"
   }
 }
