@@ -1,6 +1,6 @@
 # [Дизайн-система Consta](http://consta.gazprom-neft.ru/)
 
-Этот адаптер стилизует дерево [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Этот адаптер стилизует диаграмму Ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 # Как использовать
 
