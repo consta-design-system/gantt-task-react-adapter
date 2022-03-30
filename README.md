@@ -1,4 +1,4 @@
-# [Дизайн-система Consta](http://consta.gazprom-neft.ru/)
+# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | useGanttTaskReactAdapter
 
 Этот адаптер стилизует диаграмму Ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
@@ -95,7 +95,7 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](https://consta-tree.vercel.app/)
+[Посмотреть документацию и примеры](https://gantt-task-react-adapter.vercel.app/)
 
 ## Контрибьюторам
 

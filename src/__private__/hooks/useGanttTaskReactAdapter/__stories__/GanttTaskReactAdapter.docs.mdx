@@ -12,7 +12,7 @@ import { GantTaskReactAdapterFullyExample } from './examples/GantTaskReactAdapte
 import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter'
 ```
 
-Этот адаптер стилизует диаграмму ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/)
+Этот адаптер стилизует диаграмму Ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 - [Диаграмма](#диаграмма)
 - [Внешний вид](#внешний-вид)
@@ -25,18 +25,18 @@ import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGa
 
 Создайте список объектов с описанием задач:
 
-- `id*` - идентификатор задачи
-- `name*` - отображаемое название задачи
-- `type*` - тип задачи: `task`, `milestone`, `project`
-- `start*` - дата начала
-- `end*` - дата завершения
-- `progress*` - прогресс по задаче в процентах
-- `dependencies` - список идентификаторв задач родителей
-- `styles` - уникальный стиль для конкретной задачи
-- `isDisabled` - если `true` отключает все действия на задаче
-- `fontSize` - размер текста
-- `project` - название проекта к которому прикреплена задача
-- `hideChildren` - если `true` скрывает все дочерние задачи
+- `id*` — идентификатор задачи,
+- `name*` — отображаемое название задачи,
+- `type*` — тип задачи: `task`, `milestone`, `project`,
+- `start*` — дата начала,
+- `end*` — дата завершения,
+- `progress*` — прогресс по задаче в процентах,
+- `dependencies` — список идентификаторв задач родителей,
+- `styles` — уникальный стиль для конкретной задачи,
+- `isDisabled` — значение `true` отключает все действия на задаче,
+- `fontSize` — размер текста,
+- `project` — название проекта, к которому прикреплена задача,
+- `hideChildren` — значение `true` скрывает все дочерние задачи.
 
 ```tsx
 const data = [
@@ -106,17 +106,17 @@ export function GanttTaskReactAdapterExample() {
 
 ### Режим отображения
 
-Вы можете изменить режим отображения диаграммы используя свойство `viewMode`, оно принимает в себя
-значения укзанные в энаме `ViewMode`:
+Вы можете изменить режим отображения диаграммы с помощью свойства `viewMode`, оно принимает
+значения, указанные во `ViewMode`:
 
 ```tsx
 import { ViewMode } from 'gantt-task-react'
 
 const views = [
-  ViewMode.Day, // В каждом столбце отображется четко один день
-  ViewMode.HalfDay, // Как и в ViewMode.Day, только день делится на половины
-  ViewMode.Month, // В каждом столбце отображется четко один месяц
-  ViewMode.QuarterDay, // Как и в ViewMode.Day, только день делится на четверти
+  ViewMode.Day, // В каждом столбце отображается четко один день
+  ViewMode.HalfDay, // Как и во ViewMode.Day, только день делится на половины
+  ViewMode.Month, // В каждом столбце отображается четко один месяц
+  ViewMode.QuarterDay, // Как и во ViewMode.Day, только день делится на четверти
   ViewMode.Week, // В каждом столбце отображется четко одна неделя
 ]
 ```
