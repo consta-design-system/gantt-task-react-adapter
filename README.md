@@ -95,7 +95,7 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](http://gantt-task-react-adapter.gizeasy.ru)
+[Посмотреть документацию и примеры](http://gantt-task-react-adapter.gizeasy.ru/)
 
 ## Контрибьюторам
 
