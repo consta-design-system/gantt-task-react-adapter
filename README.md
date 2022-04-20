@@ -1,6 +1,6 @@
-# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | useGanttTaskReactAdapter
+# [Дизайн-система Consta](http://consta.design/) | useGanttTaskReactAdapter
 
-Этот адаптер стилизует диаграмму Ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Этот адаптер стилизует диаграмму Ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react) для [дизайн-системы Consta](https://consta.design/).
 
 # Как использовать
 
@@ -16,7 +16,7 @@ $ yarn add @consta/gantt-task-react-adapter
 
 ## Подключите зависимости
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.gizeasy.ru/?path=/docs/components-theme--playground).
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.consta.design/?path=/docs/components-theme--playground).
 
 ### Можно использовать компоненты
 
@@ -95,12 +95,12 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](http://gantt-task-react-adapter.gizeasy.ru/)
+[Посмотреть документацию и примеры](http://gantt-task-react-adapter.consta.design/)
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.gizeasy.ru/?path=/docs/common-develop-contributors--page).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.consta.design/?path=/docs/common-develop-contributors--page).
 
 ## Лицензия
 
-Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на условиях открытой [лицензии MIT](https://consta.gazprom-neft.ru/static/licence_mit.pdf).
+Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на условиях открытой [лицензии MIT](https://consta.design/static/licence_mit.pdf).
