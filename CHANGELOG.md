@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.1.2 (20/04/2022)
+- [docs(global): replace url (#9)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/4d122b1e68b4d68bc3e63a146a6d6bc712e05b85) - [@arhayka](https://github.com/arhayka)
+- [docs(common): change links to vercel (#7)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/457f672a23eb54d5640374dbd2f64df474f6b77e) - [@arhayka](https://github.com/arhayka)
+- [docs(global): edit links (#8)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/0787df92b23e000fc5e4bde36cec79ecd4c9eea2) - [@gizeasy](https://github.com/gizeasy)
+- [chore(deploy): edit public path (#6)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/0351efea4013f84a9ade851274ce0c803d8c065c) - [@gizeasy](https://github.com/gizeasy)
+- [chore(deploy): conditional comment on a pull request (#5)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/ecc6a29deb23c6ca304d191c17cc2efc52f87ab6) - [@gizeasy](https://github.com/gizeasy)
+- [chore(deploy): add deploy (#4)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/c20634b3b67f937e1782ad981b0081583a1628c1) - [@gizeasy](https://github.com/gizeasy)
+- [docs(readme): edit docs](https://github.com/consta-design-system/gantt-task-react-adapter/commit/4e9e1409ce5d13e991dbaded7f6563fbf5965032) - [@arhayka](https://github.com/arhayka)
+- [fix(Favicon): fix favicon](https://github.com/consta-design-system/gantt-task-react-adapter/commit/c5b577f7b276b55c9d7e70e2851e065c360a5587) - [@N1MBER](https://github.com/N1MBER)
+- [chore(telegrambot): add workflow](https://github.com/consta-design-system/gantt-task-react-adapter/commit/559fbf194fcc8bdb1236dcaca6d3b844537586b0) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.1.0 (17/03/2022)
 Сделали адаптер к диаграмме Ганта [gantt-task-react](https://github.com/MaTeMaTuK/gantt-task-react): с его помощью эту диаграмму можно использовать вместе с другими компонентами дизайн-системы `Consta`.
 
