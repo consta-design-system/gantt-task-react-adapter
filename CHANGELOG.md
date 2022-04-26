@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.3 (26/04/2022)
+- [docs(global): remove_gpn (#10)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/c5eacfe18c64e4d5345d97851441ace0a5fd85ae) - [@arhayka](https://github.com/arhayka)
+- [chore(deploy): update config](https://github.com/consta-design-system/gantt-task-react-adapter/commit/2ca9f944f4b8fa96900e0c4ed2ef678e82480190) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.1.2 (20/04/2022)
 - [docs(global): replace url (#9)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/4d122b1e68b4d68bc3e63a146a6d6bc712e05b85) - [@arhayka](https://github.com/arhayka)
 - [docs(common): change links to vercel (#7)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/457f672a23eb54d5640374dbd2f64df474f6b77e) - [@arhayka](https://github.com/arhayka)
