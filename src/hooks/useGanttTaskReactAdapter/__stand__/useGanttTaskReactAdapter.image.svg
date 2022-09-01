@@ -1,0 +1,170 @@
+<svg
+  width="200"
+  height="120"
+  viewBox="0 0 200 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g clip-path="url(#clip0_2101_16303)">
+    <rect width="200" height="120" rx="4" fill="var(--color-bg-default)" />
+    <path
+      d="M47 18L47 106"
+      stroke="var(--color-control-typo-placeholder)"
+      stroke-opacity="0.08"
+      stroke-width="2"
+      stroke-dasharray="4 4"
+    />
+    <path
+      d="M82 18L82 106"
+      stroke="var(--color-control-typo-placeholder)"
+      stroke-opacity="0.08"
+      stroke-width="2"
+      stroke-dasharray="4 4"
+    />
+    <path
+      d="M117 18L117 106"
+      stroke="var(--color-control-typo-placeholder)"
+      stroke-opacity="0.08"
+      stroke-width="2"
+      stroke-dasharray="4 4"
+    />
+    <path
+      d="M152 18L152 106"
+      stroke="var(--color-control-typo-placeholder)"
+      stroke-opacity="0.08"
+      stroke-width="2"
+      stroke-dasharray="4 4"
+    />
+    <g clip-path="url(#clip1_2101_16303)">
+      <path
+        d="M47 30C47 28.8954 47.8954 28 49 28H80C81.1046 28 82 28.8954 82 30V38C82 39.1046 81.1046 40 80 40H49C47.8954 40 47 39.1046 47 38V30Z"
+        fill="var(--color-bg-system)"
+      />
+      <rect
+        x="47"
+        y="28"
+        width="35"
+        height="12"
+        fill="var(--color-bg-system)"
+      />
+    </g>
+    <g clip-path="url(#clip2_2101_16303)">
+      <path
+        d="M47 30C47 28.8954 47.8954 28 49 28H63V40H49C47.8954 40 47 39.1046 47 38V30Z"
+        fill="var(--color-control-bg-primary)"
+      />
+      <rect
+        x="47"
+        y="28"
+        width="16"
+        height="12"
+        fill="var(--color-control-bg-primary)"
+      />
+    </g>
+    <g clip-path="url(#clip3_2101_16303)">
+      <path
+        d="M117 86C117 84.8954 117.895 84 119 84H150C151.105 84 152 84.8954 152 86V94C152 95.1046 151.105 96 150 96H119C117.895 96 117 95.1046 117 94V86Z"
+        fill="var(--color-bg-system)"
+      />
+      <rect
+        x="117"
+        y="84"
+        width="35"
+        height="12"
+        fill="var(--color-bg-system)"
+      />
+    </g>
+    <g clip-path="url(#clip4_2101_16303)">
+      <path
+        d="M117 86C117 84.8954 117.895 84 119 84H138V96H119C117.895 96 117 95.1046 117 94V86Z"
+        fill="var(--color-bg-warning)"
+      />
+      <rect
+        x="117"
+        y="84"
+        width="21"
+        height="12"
+        fill="var(--color-bg-warning)"
+      />
+    </g>
+    <g clip-path="url(#clip5_2101_16303)">
+      <path
+        d="M82 58C82 56.8954 82.8954 56 84 56H115C116.105 56 117 56.8954 117 58V66C117 67.1046 116.105 68 115 68H84C82.8954 68 82 67.1046 82 66V58Z"
+        fill="var(--color-bg-system)"
+      />
+      <rect
+        x="82"
+        y="56"
+        width="35"
+        height="12"
+        fill="var(--color-bg-system)"
+      />
+    </g>
+    <g clip-path="url(#clip6_2101_16303)">
+      <path
+        d="M82 58C82 56.8954 82.8954 56 84 56H95V68H84C82.8954 68 82 67.1046 82 66V58Z"
+        fill="var(--color-control-bg-primary)"
+      />
+      <rect
+        x="82"
+        y="56"
+        width="13"
+        height="12"
+        fill="var(--color-control-bg-primary)"
+      />
+    </g>
+    <path
+      d="M117 62H123V76H111V90H117"
+      stroke="var(--color-control-typo-placeholder)"
+      stroke-opacity="0.3"
+      stroke-width="2"
+    />
+    <path
+      d="M82 34H88V48.1809H75V62H82"
+      stroke="var(--color-control-typo-placeholder)"
+      stroke-opacity="0.3"
+      stroke-width="2"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0_2101_16303">
+      <rect width="200" height="120" rx="3" fill="var(--color-bg-default)" />
+    </clipPath>
+    <clipPath id="clip1_2101_16303">
+      <path
+        d="M47 30C47 28.8954 47.8954 28 49 28H80C81.1046 28 82 28.8954 82 30V38C82 39.1046 81.1046 40 80 40H49C47.8954 40 47 39.1046 47 38V30Z"
+        fill="var(--color-bg-default)"
+      />
+    </clipPath>
+    <clipPath id="clip2_2101_16303">
+      <path
+        d="M47 30C47 28.8954 47.8954 28 49 28H63V40H49C47.8954 40 47 39.1046 47 38V30Z"
+        fill="var(--color-bg-default)"
+      />
+    </clipPath>
+    <clipPath id="clip3_2101_16303">
+      <path
+        d="M117 86C117 84.8954 117.895 84 119 84H150C151.105 84 152 84.8954 152 86V94C152 95.1046 151.105 96 150 96H119C117.895 96 117 95.1046 117 94V86Z"
+        fill="var(--color-bg-default)"
+      />
+    </clipPath>
+    <clipPath id="clip4_2101_16303">
+      <path
+        d="M117 86C117 84.8954 117.895 84 119 84H138V96H119C117.895 96 117 95.1046 117 94V86Z"
+        fill="var(--color-bg-default)"
+      />
+    </clipPath>
+    <clipPath id="clip5_2101_16303">
+      <path
+        d="M82 58C82 56.8954 82.8954 56 84 56H115C116.105 56 117 56.8954 117 58V66C117 67.1046 116.105 68 115 68H84C82.8954 68 82 67.1046 82 66V58Z"
+        fill="var(--color-bg-default)"
+      />
+    </clipPath>
+    <clipPath id="clip6_2101_16303">
+      <path
+        d="M82 58C82 56.8954 82.8954 56 84 56H95V68H84C82.8954 68 82 67.1046 82 66V58Z"
+        fill="var(--color-bg-default)"
+      />
+    </clipPath>
+  </defs>
+</svg>
