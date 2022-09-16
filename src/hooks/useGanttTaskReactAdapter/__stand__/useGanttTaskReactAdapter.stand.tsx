@@ -4,7 +4,7 @@ export default createStand({
   title: 'useGanttTaskReactAdapter',
   id: 'useGanttTaskReactAdapter',
   group: 'components',
-  description: 'Этот адаптер стилизует диаграмму Ганта.',
+  description: 'Адаптер для диаграммы Ганта.',
   version: '0.1.3',
   sandbox: 'usegantttaskreactadapter-jcszt7',
   figma:
