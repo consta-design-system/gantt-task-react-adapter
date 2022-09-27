@@ -1,31 +1,37 @@
+import 'gantt-task-react/dist/index.css';
+import './UseGanttTaskReactAdapter.css';
+
+import { getByMap } from '@consta/uikit/__internal__/src/utils/getByMap';
+import { useThemeVars } from '@consta/uikit/useThemeVars';
+
+import { cn } from '##/utils/bem';
+
 import {
   GanttTaskReactAdapter,
   GanttTaskReactAdapterPropSize,
   ganttTaskReactAdapterPropSizeDefault,
-} from './types'
-import { useThemeVars } from '@consta/uikit/useThemeVars'
-import 'gantt-task-react/dist/index.css'
-import { getByMap } from '@consta/uikit/__internal__/src/utils/getByMap'
-import './UseGanttTaskReactAdapter.css'
-import { cn } from '@/__private__/utils/bem'
+} from './types';
 
-const convertPixelToNumber = (value: string): number => Number(value.split('px')[0])
+const convertPixelToNumber = (value: string): number =>
+  Number(value.split('px')[0]);
 
 const sizeRowMap: Record<GanttTaskReactAdapterPropSize, 'l' | 'xl' | '2xl'> = {
   s: 'l',
   m: 'xl',
   l: '2xl',
-}
+};
 
-const cnUseGanttTaskReactAdapter = cn('UseGanttTaskReactAdapter')
+const cnUseGanttTaskReactAdapter = cn('UseGanttTaskReactAdapter');
 
-export const useGanttTaskReactAdapter: GanttTaskReactAdapter = props => {
-  const { size = ganttTaskReactAdapterPropSizeDefault } = props
-  const vars = useThemeVars()
+export const useGanttTaskReactAdapter: GanttTaskReactAdapter = (props) => {
+  const { size = ganttTaskReactAdapterPropSizeDefault } = props;
+  const vars = useThemeVars();
 
   const rowHeight = convertPixelToNumber(
-    vars.space[`--space-${getByMap(sizeRowMap, size)}` as keyof typeof vars.space]
-  )
+    vars.space[
+      `--space-${getByMap(sizeRowMap, size)}` as keyof typeof vars.space
+    ],
+  );
 
   return {
     headerHeight: 58,
@@ -50,5 +56,5 @@ export const useGanttTaskReactAdapter: GanttTaskReactAdapter = props => {
     todayColor: vars.color.primary['--color-bg-stripe'],
     prefix: cnUseGanttTaskReactAdapter({ size }),
     columnWidth: 120,
-  }
-}
+  };
+};
