@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.0.0 (29/09/2022)
+Самое важное:
+Выкладываем новый стенд и сборщик.
+
+Добавили песочницу: теперь в ней можно смотреть примеры компонентов.
+
+⚠️ Внимание: эта версия библиотеки работает только вместе с `@consta/uikit` версии `v4.0.1` или выше
+
+---
+
+- [chore(stand): new stand and new builder (#11)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/bc8da23bfff4cb71f5aa29a4cbb47640ed407e6d) - [@gizeasy](https://github.com/gizeasy)
+- [feat(useGanttTaskReactAdapter): update fonts to inter](https://github.com/consta-design-system/gantt-task-react-adapter/commit/154bf5a92aa87a082723a05e2709a18d90046777) - [@N1MBER](https://github.com/N1MBER)
+- [chore(Storybook): change logo](https://github.com/consta-design-system/gantt-task-react-adapter/commit/43632247a152559fb0b0469baba85dcd17f81dd5) - [@N1MBER](https://github.com/N1MBER)
+- [chore(stand): add automation publish stand](https://github.com/consta-design-system/gantt-task-react-adapter/commit/4308bf9cfe0d7f52197aa19b17286b903950fc9d) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.1.3 (26/04/2022)
 - [docs(global): remove_gpn (#10)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/c5eacfe18c64e4d5345d97851441ace0a5fd85ae) - [@arhayka](https://github.com/arhayka)
 - [chore(deploy): update config](https://github.com/consta-design-system/gantt-task-react-adapter/commit/2ca9f944f4b8fa96900e0c4ed2ef678e82480190) - [@gizeasy](https://github.com/gizeasy)
