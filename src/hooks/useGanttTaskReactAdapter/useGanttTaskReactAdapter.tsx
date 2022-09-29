@@ -27,8 +27,6 @@ export const useGanttTaskReactAdapter: GanttTaskReactAdapter = (props) => {
   const { size = ganttTaskReactAdapterPropSizeDefault } = props;
   const vars = useThemeVars();
 
-  console.log(vars);
-
   const rowHeight = convertPixelToNumber(
     vars.space[
       `--space-${getByMap(sizeRowMap, size)}` as keyof typeof vars.space
@@ -39,7 +37,7 @@ export const useGanttTaskReactAdapter: GanttTaskReactAdapter = (props) => {
     headerHeight: 58,
     rowHeight: rowHeight + 12,
     barCornerRadius: convertPixelToNumber(vars.control['--control-radius']),
-    fontFamily: 'Segoe UI',
+    fontFamily: vars.font['--font-primary'],
     locale: 'RU',
     fontSize: vars.size['--size-text-m'],
     barFill: (rowHeight / (rowHeight + 12)) * 100,
