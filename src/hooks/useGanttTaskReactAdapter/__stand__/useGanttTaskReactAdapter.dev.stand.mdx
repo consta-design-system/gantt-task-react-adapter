@@ -1,0 +1,256 @@
+import { MdxMenu } from '@consta/stand';
+import { RemadeTableInfo } from '../../../stand/components/RemadeInfo/RemadeInfo';
+import { GanttTaskReactAdapterExample } from './examples/GanttTaskReactAdapterExample/GanttTaskReactAdapterExample';
+import { GantTaskReactAdapterFullyExample } from './examples/GantTaskReactAdapterFullyExample/GantTaskReactAdapterFullyExample';
+
+```tsx
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter';
+```
+
+<MdxMenu>
+
+- [Диаграмма](#диаграмма)
+- [Внешний вид](#внешний-вид)
+  - [Режим отображения](#режим-отображения)
+- [Импорт](#импорт)
+- [Список свойств](#свойства)
+- [Пример](#пример)
+
+</MdxMenu>
+
+## Диаграмма
+
+Создайте список объектов с описанием задач:
+
+- `id*` — идентификатор задачи,
+- `name*` — отображаемое название задачи,
+- `type*` — тип задачи: `task`, `milestone`, `project`,
+- `start*` — дата начала,
+- `end*` — дата завершения,
+- `progress*` — прогресс по задаче в процентах,
+- `dependencies` — список идентификаторв задач родителей,
+- `styles` — уникальный стиль для конкретной задачи,
+- `isDisabled` — значение `true` отключает все действия на задаче,
+- `fontSize` — размер текста,
+- `project` — название проекта, к которому прикреплена задача,
+- `hideChildren` — значение `true` скрывает все дочерние задачи.
+
+```tsx
+const data = [
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
+    name: 'Some Project',
+    id: 'ProjectSample',
+    progress: 25,
+    type: 'project',
+
+    hideChildren: false,
+  },
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2, 12, 28),
+    name: 'Idea',
+    id: 'Task 0',
+    progress: 45,
+    type: 'task',
+    project: 'ProjectSample',
+  },
+  ...
+]
+```
+
+Чтобы отобразить задачи, передайте в свойстве `tasks` объект с данными.
+
+```tsx
+import React from 'react'
+import { Gantt, Task } from 'gantt-task-react'
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter'
+
+const data:Task[] = [
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
+    name: 'Some Project',
+    id: 'ProjectSample',
+    progress: 25,
+    type: 'project',
+
+    hideChildren: false,
+  },
+  {
+    start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+    end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2, 12, 28),
+    name: 'Idea',
+    id: 'Task 0',
+    progress: 45,
+    type: 'task',
+    project: 'ProjectSample',
+  },
+  ...
+]
+
+export function GanttTaskReactAdapterExample() {
+  const styleOptions = useGanttTaskReactAdapter({ size: 'm' })
+
+  return <Gantt {...styleOptions} tasks={data} />
+}
+```
+
+<GanttTaskReactAdapterExample />
+
+## Внешний вид
+
+### Режим отображения
+
+Вы можете изменить режим отображения диаграммы с помощью свойства `viewMode`, оно принимает
+значения, указанные во `ViewMode`:
+
+```tsx
+import { ViewMode } from 'gantt-task-react';
+
+const views = [
+  ViewMode.Day, // В каждом столбце отображается четко один день
+  ViewMode.HalfDay, // Как и во ViewMode.Day, только день делится на половины
+  ViewMode.Month, // В каждом столбце отображается четко один месяц
+  ViewMode.QuarterDay, // Как и во ViewMode.Day, только день делится на четверти
+  ViewMode.Week, // В каждом столбце отображется четко одна неделя
+];
+```
+
+## Импорт
+
+```tsx
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter';
+```
+
+## Свойства
+
+<RemadeTableInfo apiUrl="https://github.com/MaTeMaTuK/gantt-task-react" />
+
+| Свойство                          | Тип и значения  | По умолчанию   | Описание                    |
+| --------------------------------- | --------------- | -------------- | --------------------------- |
+| [`tasks`](#диаграмма)             | `Task[]`        | -              | Список задач                |
+| [`viewMode?`](#режим-отображения) | `ViewMode`      | `ViewMode.Day` | Режим отображения диаграммы |
+| `size?`                           | `'s', 'm', 'l'` | `m`            | Размер                      |
+
+## Пример
+
+```tsx
+import React, { useState } from 'react';
+
+import { Gantt, Task, ViewMode } from 'gantt-task-react';
+import { useGanttTaskReactAdapter } from '@consta/gantt-task-react-adapter/useGanttTaskReactAdapter';
+import { TaskListHeader } from '@consta/gantt-task-react-adapter/TaskListHeader';
+import { TaskListTable } from '@consta/gantt-task-react-adapter/TaskListTable';
+import { TooltipContent } from '@consta/gantt-task-react-adapter/TooltipContent';
+import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
+import { Switch } from '@consta/uikit/Switch';
+
+const getStartEndDateForProject = (tasks: Task[], projectId: string) => {
+  const projectTasks = tasks.filter((t) => t.project === projectId);
+  let start = projectTasks[0].start;
+  let end = projectTasks[0].end;
+
+  projectTasks.forEach((task) => {
+    if (start.getTime() > task.start.getTime()) {
+      start = task.start;
+    }
+    if (end.getTime() < task.end.getTime()) {
+      end = task.end;
+    }
+  });
+
+  return [start, end];
+};
+
+const views = [
+  ViewMode.Day,
+  ViewMode.HalfDay,
+  ViewMode.Month,
+  ViewMode.QuarterDay,
+  ViewMode.Week,
+];
+
+export const GantTaskReactAdapterFullyExample = () => {
+  const [tasks, setTasks] = useState<Task[]>(data);
+  const [showTask, setShowTask] = useState<boolean>(true);
+  const [viewMode, setViewMode] = useState<ViewMode>(views[0]);
+
+  const { prefix, ...styleOptions } = useGanttTaskReactAdapter({});
+
+  const handleTaskChange = (task: Task) => {
+    let newTasks = tasks.map((t) => (t.id === task.id ? task : t));
+    if (task.project) {
+      const [start, end] = getStartEndDateForProject(newTasks, task.project);
+      const project =
+        newTasks[newTasks.findIndex((t) => t.id === task.project)];
+      if (
+        project.start.getTime() !== start.getTime() ||
+        project.end.getTime() !== end.getTime()
+      ) {
+        const changedProject = { ...project, start, end };
+        newTasks = newTasks.map((t) =>
+          t.id === task.project ? changedProject : t,
+        );
+      }
+    }
+    setTasks(newTasks);
+  };
+
+  const handleTaskDelete = (task: Task) => {
+    const conf = window.confirm('Are you sure about ' + task.name + ' ?');
+    if (conf) {
+      setTasks([...tasks].filter((t) => t.id !== task.id));
+    }
+    return conf;
+  };
+
+  const handleProgressChange = async (task: Task) => {
+    setTasks([...tasks].map((t) => (t.id === task.id ? task : t)));
+  };
+
+  const handleExpanderClick = (task: Task) => {
+    setTasks([...tasks].map((t) => (t.id === task.id ? task : t)));
+  };
+
+  return (
+    <div className={cnGantTaskReactAdapterFullyExample()}>
+      <div className={cnGantTaskReactAdapterFullyExample('Controls')}>
+        <Switch
+          label="Показывать список задач"
+          checked={showTask}
+          size="s"
+          onChange={({ checked }) => setShowTask(checked)}
+        />
+        <ChoiceGroup
+          getLabel={(item) => item}
+          value={viewMode}
+          view="ghost"
+          items={views}
+          size="xs"
+          onChange={({ value }) => setViewMode(value)}
+          name="GantTaskReactAdapterFullyExample"
+        />
+      </div>
+      <div className={cnGantTaskReactAdapterFullyExample('Gantt', [prefix])}>
+        <Gantt
+          tasks={tasks}
+          viewMode={viewMode}
+          onDateChange={handleTaskChange}
+          onDelete={handleTaskDelete}
+          onProgressChange={handleProgressChange}
+          onExpanderClick={handleExpanderClick}
+          TaskListTable={TaskListTable}
+          TaskListHeader={TaskListHeader}
+          TooltipContent={TooltipContent}
+          listCellWidth={showTask ? undefined : ''}
+          {...styleOptions}
+        />
+      </div>
+    </div>
+  );
+};
+```
+
+<GantTaskReactAdapterFullyExample />
