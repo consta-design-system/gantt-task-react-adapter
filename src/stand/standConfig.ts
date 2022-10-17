@@ -7,9 +7,15 @@ export const { createStand } = createConfig({
   id: 'gantt-task-react-adapter',
   groups: [
     {
+      title: 'Документация',
+      id: 'docs',
+      initialOpen: true,
+    },
+    {
       title: 'Hooks',
       id: 'hooks',
       view: 'card',
+      initialOpen: true,
     },
   ],
   group: 'Адаптеры',
