@@ -41,6 +41,7 @@
     height: var(--space-s);
     margin-right: var(--space-s);
     padding: 0;
+    color: var(--color-typo-primary);
     background: none;
     border: none;
     cursor: pointer;
