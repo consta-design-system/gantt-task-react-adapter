@@ -32,8 +32,14 @@
     border-bottom: 1px solid var(--color-bg-border);
   }
 
-  & .rows > rect:nth-child(even) {
-    fill: var(--color-bg-stripe);
+  & .rows > rect {
+    &:nth-child(even) {
+      fill: var(--color-bg-stripe);
+    }
+
+    &:nth-child(odd) {
+      fill: var(--color-bg-default);
+    }
   }
 
   & .ticks,
@@ -64,8 +70,20 @@
   & svg > g.calendar {
     height: 58px !important;
 
+    & > rect:first-child {
+      fill: var(--color-bg-default);
+    }
+
+    & > text {
+      fill: var(--color-typo-primary);
+    }
+
     & .calendarTop {
       height: var('--space-2xl') !important;
+
+      & > text {
+        fill: var(--color-typo-primary);
+      }
 
       & line {
         stroke: var(--color-bg-border);
