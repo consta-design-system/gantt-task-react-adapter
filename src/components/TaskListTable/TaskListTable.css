@@ -1,8 +1,8 @@
-.TaskListTable {
+.gtra--TaskListTable {
   width: 100%;
   border-top: 1px solid var(--color-bg-border);
 
-  & .TaskListTable-Row:nth-child(even) {
+  & .gtra--TaskListTable-Row:nth-child(even) {
     background: var(--color-bg-stripe);
   }
 
