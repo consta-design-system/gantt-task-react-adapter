@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.1 (30/11/2022)
+- [fix(prefix): add prefix for class names (#20)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/abb6c44515ce12a1a5e51f9457d3ea777e2cdfb4) - [@N1MBER](https://github.com/N1MBER)
+- [fix(UseGanttTaskReactAdapter): fix colors for dark theme (#19)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/6df28243683b05cf050e44950bcaafcb6bee7108) - [@N1MBER](https://github.com/N1MBER)
+- [docs(portal): readme, stand, version (#18)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/a6fc1e1a6435cb80632fb5c6ae03416654a1b8fa) - [@arhayka](https://github.com/arhayka)
+- [docs: readme, links, and menu (#17)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/181418c55be305c79ae2a4e36717cce6b9cbe661) - [@arhayka](https://github.com/arhayka)
+- [chore(deps): update @consta/stand](https://github.com/consta-design-system/gantt-task-react-adapter/commit/55b90762370825b2a13014b3f11e66a3da580c26) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v1.0.0 (29/09/2022)
 Самое важное:
 Выкладываем новый стенд и сборщик.
