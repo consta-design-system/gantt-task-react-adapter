@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.0.2 (18/05/2023)
+Самое важное:
+- Исправление стилей адаптера
+---
+
+- [fix(useGanttTaskReactAdapter): fix styles (#22)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/3f24e47c5ac74bb074c009b4245885dd90dd546a) - [@N1MBER](https://github.com/N1MBER)
+- [docs(useGanttTaskReactAdapter): add aliases (#21)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/261e4d3903ad57b86b76d2a49034b16f22b51621) - [@N1MBER](https://github.com/N1MBER)
+- [chore: update @consta/stand](https://github.com/consta-design-system/gantt-task-react-adapter/commit/8e8cb004f26c5fedd0a4b2f0cc27dc78e0428c81) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v1.0.1 (30/11/2022)
 - [fix(prefix): add prefix for class names (#20)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/abb6c44515ce12a1a5e51f9457d3ea777e2cdfb4) - [@N1MBER](https://github.com/N1MBER)
 - [fix(UseGanttTaskReactAdapter): fix colors for dark theme (#19)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/6df28243683b05cf050e44950bcaafcb6bee7108) - [@N1MBER](https://github.com/N1MBER)
