@@ -91,9 +91,13 @@ const data:Task[] = [
 ]
 
 export function GanttTaskReactAdapterExample() {
-  const styleOptions = useGanttTaskReactAdapter({ size: 'm' })
+  const { prefix, ...styleOptions} = useGanttTaskReactAdapter({ size: 'm' })
 
-  return <Gantt {...styleOptions} tasks={data} />
+  return (
+    <div className={prefix}>
+      <Gantt {...styleOptions} tasks={data} />
+    </div>
+  )
 }
 ```
 
