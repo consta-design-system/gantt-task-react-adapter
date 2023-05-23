@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.3 (23/05/2023)
+Запускать локальный сервер разработки и сборку пакетов теперь можно и на ОС Windows. 
+
+---
+
+- [chore: configure build for windows (#23)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/807cbf66e35bd7bff06b298c604a64d52aa33bf3) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v1.0.2 (18/05/2023)
 Самое важное:
 - Исправление стилей адаптера
