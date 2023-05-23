@@ -1,6 +1,6 @@
 {
   "name": "@consta/gantt-task-react-adapter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "postinstall": "husky install",
     "tsc-dry-run": "tsc --noEmit",
