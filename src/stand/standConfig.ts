@@ -24,4 +24,6 @@ export const { createStand } = createConfig({
     'Адптер для диаграммы Ганта из библиотеки gantt-task-react. Стилизует диаграмму для дизайн-системы Consta.',
   repositoryUrl:
     'https://github.com/consta-design-system/gantt-task-react-adapter',
+  figmaUrl:
+    'https://www.figma.com/file/LKYyjgQ3khFHvXraZAG1n1/Consta-Components?type=design&node-id=445-29188&t=DKeTFCEKhSmLPtik-0',
 });
