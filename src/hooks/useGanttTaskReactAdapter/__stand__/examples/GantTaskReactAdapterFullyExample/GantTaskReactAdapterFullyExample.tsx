@@ -2,6 +2,7 @@ import './GantTaskReactAdapterFullyExample.css';
 
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
 import { Switch } from '@consta/uikit/Switch';
+import { useFlag } from '@consta/uikit/useFlag';
 import { Gantt, Task, ViewMode } from 'gantt-task-react';
 import React, { useState } from 'react';
 
@@ -44,7 +45,7 @@ const views = [
 
 export const GantTaskReactAdapterFullyExample = () => {
   const [tasks, setTasks] = useState<Task[]>(data);
-  const [showTask, setShowTask] = useState<boolean>(true);
+  const [showTask, setShowTask] = useFlag(true);
   const [viewMode, setViewMode] = useState<ViewMode>(views[0]);
 
   const { prefix, ...styleOptions } = useGanttTaskReactAdapter({});
@@ -91,7 +92,7 @@ export const GantTaskReactAdapterFullyExample = () => {
           label="Показывать список задач"
           checked={showTask}
           size="s"
-          onChange={({ checked }) => setShowTask(checked)}
+          onChange={setShowTask.toggle}
         />
         <ChoiceGroup
           getItemLabel={(item) => item}
@@ -99,7 +100,7 @@ export const GantTaskReactAdapterFullyExample = () => {
           items={views}
           size="xs"
           view="ghost"
-          onChange={({ value }) => setViewMode(value)}
+          onChange={setViewMode}
           name="GantTaskReactAdapterFullyExample"
         />
       </div>

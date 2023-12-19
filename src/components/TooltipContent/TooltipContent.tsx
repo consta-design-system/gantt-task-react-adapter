@@ -49,22 +49,26 @@ export const TooltipContent = (props: Props) => {
       className={cnToolripContent()}
     >
       {type === 'task' && project && (
-        <Text size="2xs" view="secondary">
+        <Text size="2xs" view="secondary" lineHeight="m">
           Проект: {project}
         </Text>
       )}
-      <Text size="m" weight="bold">
+      <Text size="m" weight="bold" lineHeight="m" view="primary">
         {name}
       </Text>
       {type !== 'milestone' ? (
         <>
-          <Text size="s">
+          <Text size="s" lineHeight="m" view="primary">
             Продолжительность: {`${days} ${getDaysPostfix(days)}`}
           </Text>
-          <Text size="s">Прогресс: {progress}%</Text>
+          <Text size="s" lineHeight="m" view="primary">
+            Прогресс: {progress}%
+          </Text>
         </>
       ) : (
-        <Text size="s">Дата: {convertDateToString(end)}</Text>
+        <Text size="s" lineHeight="m" view="primary">
+          Дата: {convertDateToString(end)}
+        </Text>
       )}
     </Card>
   );

@@ -1,5 +1,6 @@
 .gtra--UseGanttTaskReactAdapter {
   --gantt-text-size: 0;
+  line-height: 0;
 
   &_size {
     &_s {

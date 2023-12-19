@@ -1,6 +1,6 @@
 import './TaskListTable.css';
 
-import { IconArrowDown } from '@consta/uikit/IconArrowDown';
+import { IconArrowDown } from '@consta/icons/IconArrowDown';
 import { Text } from '@consta/uikit/Text';
 import { Task } from 'gantt-task-react';
 import React from 'react';
@@ -121,12 +121,24 @@ export const TaskListTable = (props: Props) => {
                   <IconArrowDown size="xs" />
                 </button>
               )}
-              <Text size="s">{name}</Text>
+              <Text size="s" lineHeight="m" view="primary">
+                {name}
+              </Text>
             </div>
-            <Text className={cnTaskListTable('Cell')} size="s">
+            <Text
+              className={cnTaskListTable('Cell')}
+              size="s"
+              lineHeight="m"
+              view="primary"
+            >
               {convertDate(start)}
             </Text>
-            <Text className={cnTaskListTable('Cell')} size="s">
+            <Text
+              className={cnTaskListTable('Cell')}
+              size="s"
+              lineHeight="m"
+              view="primary"
+            >
               {convertDate(end)}
             </Text>
           </div>

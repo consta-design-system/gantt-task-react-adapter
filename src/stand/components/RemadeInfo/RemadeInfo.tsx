@@ -15,7 +15,7 @@ export const RemadeInfo: React.FC<{
   const { commponentName, apiUrl } = props;
   return (
     <Informer className={cnRemadeInfo()} status="system" view="bordered">
-      <Text>
+      <Text lineHeight="m" view="primary" size="m">
         Это компонент{' '}
         <Text as="span" weight="bold">
           {commponentName}

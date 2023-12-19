@@ -17,6 +17,7 @@ export const TaskListHeader = () => {
         weight="bold"
         align="left"
         transform="uppercase"
+        view="primary"
       >
         Этапы проекта
       </Text>
@@ -27,6 +28,7 @@ export const TaskListHeader = () => {
         weight="bold"
         align="left"
         transform="uppercase"
+        view="primary"
       >
         Начало
       </Text>
@@ -37,6 +39,7 @@ export const TaskListHeader = () => {
         weight="bold"
         align="left"
         transform="uppercase"
+        view="primary"
       >
         Окончание
       </Text>
