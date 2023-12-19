@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.0 (19/12/2023)
+Самое важное:
+- Сторонние зависимости перенесены в `peerDependencies`. Установить их вы сможете самостоятельно, полный список доступен [здесь](https://github.com/consta-design-system/gantt-task-react-adapter/blob/master/package.json) 
+- Добавлена поддержка `@consta/uikit` `v5.0.0`
+
+---
+
+- [chore(utils): added status classNames (#26)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/835820548f8ad9bf6935d10c3079d85891e5e487) - [@N1MBER](https://github.com/N1MBER)
+- [chore: edit deploy config and codeowners (#25)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/63b3dbf19dc257a47ea530e5e3043bc83ad3a572) - [@gizeasy](https://github.com/gizeasy)
+- [docs(standConfig): add figmaUrl (#24)](https://github.com/consta-design-system/gantt-task-react-adapter/commit/5825f7a1d9abc93706aa19682f75a6ae8244e4b9) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v1.0.3 (23/05/2023)
 Запускать локальный сервер разработки и сборку пакетов теперь можно и на ОС Windows. 
 
