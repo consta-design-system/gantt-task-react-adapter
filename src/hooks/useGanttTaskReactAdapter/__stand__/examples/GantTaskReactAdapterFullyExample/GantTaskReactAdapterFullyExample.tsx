@@ -94,7 +94,7 @@ export const GantTaskReactAdapterFullyExample = () => {
           size="s"
           onChange={setShowTask.toggle}
         />
-        <ChoiceGroup
+        <ChoiceGroup<ViewMode>
           getItemLabel={(item) => item}
           value={viewMode}
           items={views}
